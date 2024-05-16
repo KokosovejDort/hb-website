@@ -44,3 +44,14 @@ button:hover {
 button:focus {
     outline: none;
 }
+
+#restartButton {
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #6c757d;
+}
+
+#restartButton:hover {
+    background-color: #5a6268;
+}
