@@ -6,6 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+    text-align: center;
 }
 
 .container {
@@ -14,10 +15,15 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
 }
 
 h1 {
     margin-bottom: 20px;
+    font-size: 20px;
+    word-wrap: break-word;
+    line-height: 1.5;
 }
 
 .buttons {
@@ -45,13 +51,14 @@ button:focus {
     outline: none;
 }
 
-#restartButton {
+.restart-btn {
     margin-top: 20px;
     font-size: 14px;
     padding: 5px 10px;
     background-color: #6c757d;
+    display: inline-block;
 }
 
-#restartButton:hover {
+.restart-btn:hover {
     background-color: #5a6268;
 }
