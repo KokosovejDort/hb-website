@@ -8,10 +8,12 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="question">Do you like programming?</h1>
+        <h1 id="question">Это только игра</h1>
         <div class="buttons">
-            <button onclick="yesClicked()">Yes</button>
-            <button onclick="noClicked()">No</button>
+            <button id="startButton" onclick="startGame()">Старт</button>
+            <button id="yesButton" onclick="yesClicked()" style="display:none;">Да</button>
+            <button id="noButton" onclick="noClicked()" style="display:none;">Нет</button>
+            <button id="destroyButton" onclick="destroyClicked()" style="display:none;">Уничтожить</button>
         </div>
     </div>
     <script src="script.js"></script>
