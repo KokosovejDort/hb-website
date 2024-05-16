@@ -46,5 +46,3 @@ function yesClicked() {
 }
 
 function noClicked() {
-    document.getElementById("question").textContent = endMessages[currentQuestionIndex];
-    document.getElementById('yesButton').style.display = 'none';
