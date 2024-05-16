@@ -65,3 +65,13 @@ button:focus {
 .restart-btn:hover {
     background-color: #5a6268;
 }
+
+.destroy-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #FF0000;
+}
+
+.destroy-btn:hover {
+    background-color: #CC0000;
+}
