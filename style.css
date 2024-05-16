@@ -67,9 +67,10 @@ button:focus {
 }
 
 .destroy-btn {
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 20px 40px;
+    font-size: 24px;
     background-color: #FF0000;
+    display: none;
 }
 
 .destroy-btn:hover {
