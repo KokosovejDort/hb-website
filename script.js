@@ -48,20 +48,3 @@ function yesClicked() {
 function noClicked() {
     document.getElementById("question").textContent = endMessages[currentQuestionIndex];
     document.getElementById('yesButton').style.display = 'none';
-    document.getElementById('noButton').style.display = 'none';
-}
-
-function destroyClicked() {
-    document.getElementById("question").textContent = "От Саши: это всего лишь игра, но поздравляю";
-    document.getElementById('destroyButton').style.display = 'none';
-}
-
-function restartGame() {
-    currentQuestionIndex = 0;
-    document.getElementById('startButton').style.display = 'inline-block';
-    document.getElementById('yesButton').style.display = 'none';
-    document.getElementById('noButton').style.display = 'none';
-    document.getElementById('destroyButton').style.display = 'none';
-    document.getElementById('restartButton').style.display = 'none';
-    document.getElementById("question").textContent = "Это только игра";
-}
