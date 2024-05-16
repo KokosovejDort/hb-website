@@ -30,6 +30,7 @@ function nextQuestion() {
 
 function yesClicked() {
     if (currentQuestionIndex === questions.length - 1) {
+        document.getElementById("question").textContent = "";
         document.getElementById('yesButton').style.display = 'none';
         document.getElementById('noButton').style.display = 'none';
         document.getElementById('destroyButton').style.display = 'inline-block';
@@ -40,15 +41,9 @@ function yesClicked() {
 }
 
 function noClicked() {
-    if (currentQuestionIndex === questions.length - 1) {
-        document.getElementById("question").textContent = endMessages[currentQuestionIndex];
-        document.getElementById('yesButton').style.display = 'none';
-        document.getElementById('noButton').style.display = 'none';
-    } else {
-        document.getElementById("question").textContent = endMessages[currentQuestionIndex];
-        document.getElementById('yesButton').style.display = 'none';
-        document.getElementById('noButton').style.display = 'none';
-    }
+    document.getElementById("question").textContent = endMessages[currentQuestionIndex];
+    document.getElementById('yesButton').style.display = 'none';
+    document.getElementById('noButton').style.display = 'none';
 }
 
 function destroyClicked() {
