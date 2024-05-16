@@ -25,35 +25,30 @@ function startGame() {
 function nextQuestion() {
     if (currentQuestionIndex < questions.length) {
         document.getElementById("question").textContent = questions[currentQuestionIndex];
-    } else {
-        document.getElementById("question").textContent = "От Саши: это всего лишь игра, но поздравляю";
-        document.getElementById('yesButton').style.display = 'none';
-        document.getElementById('noButton').style.display = 'none';
-        document.getElementById('destroyButton').style.display = 'none';
     }
 }
 
 function yesClicked() {
-    currentQuestionIndex++;
     if (currentQuestionIndex === questions.length - 1) {
-        document.getElementById("question").textContent = questions[currentQuestionIndex];
-        document.getElementById('yesButton').style.display = 'inline-block';
-        document.getElementById('noButton').style.display = 'inline-block';
-        document.getElementById('destroyButton').style.display = 'none';
-    } else if (currentQuestionIndex === questions.length) {
-        document.getElementById("question").textContent = questions[currentQuestionIndex - 1];
         document.getElementById('yesButton').style.display = 'none';
         document.getElementById('noButton').style.display = 'none';
         document.getElementById('destroyButton').style.display = 'inline-block';
     } else {
+        currentQuestionIndex++;
         nextQuestion();
     }
 }
 
 function noClicked() {
-    document.getElementById("question").textContent = endMessages[currentQuestionIndex];
-    document.getElementById('yesButton').style.display = 'none';
-    document.getElementById('noButton').style.display = 'none';
+    if (currentQuestionIndex === questions.length - 1) {
+        document.getElementById("question").textContent = endMessages[currentQuestionIndex];
+        document.getElementById('yesButton').style.display = 'none';
+        document.getElementById('noButton').style.display = 'none';
+    } else {
+        document.getElementById("question").textContent = endMessages[currentQuestionIndex];
+        document.getElementById('yesButton').style.display = 'none';
+        document.getElementById('noButton').style.display = 'none';
+    }
 }
 
 function destroyClicked() {
