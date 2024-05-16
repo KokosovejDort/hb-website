@@ -2,7 +2,7 @@ const questions = [
     "Хочешь избавиться от человечества?",
     "Мама: Андрей, ты и мной пожертвуешь, тебе меня не жаль?!",
     "YSL: мы предлагаем 3-годичный контракт с дальнейшим продлением и с переездом в Токио. Этим тоже жертвуешь?",
-    "Мы (самые главные депутаты мира) против твоего решения, ты уверен, что сможешь пойти против нас?"
+    "Мы (самые главные депутата мира) против твоего решения, ты уверен, что сможешь пойти против нас?"
 ];
 
 const endMessages = [
@@ -35,7 +35,12 @@ function nextQuestion() {
 
 function yesClicked() {
     currentQuestionIndex++;
-    if (currentQuestionIndex === questions.length) {
+    if (currentQuestionIndex === questions.length - 1) {
+        document.getElementById("question").textContent = questions[currentQuestionIndex];
+        document.getElementById('yesButton').style.display = 'inline-block';
+        document.getElementById('noButton').style.display = 'inline-block';
+        document.getElementById('destroyButton').style.display = 'none';
+    } else if (currentQuestionIndex === questions.length) {
         document.getElementById("question").textContent = questions[currentQuestionIndex - 1];
         document.getElementById('yesButton').style.display = 'none';
         document.getElementById('noButton').style.display = 'none';
